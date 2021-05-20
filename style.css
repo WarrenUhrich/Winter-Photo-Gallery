@@ -1,0 +1,169 @@
+/* Write some CSS below */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  background-image: url( 'images/Background\ \(pexels-photo-1978126\).jpeg' );
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba( 255, 255, 255, 0.75 );
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+header h1,
+header p {
+  display: block;
+  position: relative;
+}
+
+header h1 {
+  color: rgb( 100, 100, 160 );
+  font-size: 2rem;
+}
+
+header p:first-of-type {
+  margin: 5vh;
+}
+
+header p:last-of-type a {
+  color: rgb( 255, 255, 255 );
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba( 100, 100, 160, 1 );
+  border-radius: 0.25rem;
+  transition: 0.15s linear background-color;
+}
+
+header p:last-of-type a:hover {
+  background-color: rgba( 100, 100, 160, 0.65 );
+}
+
+section {
+  padding: 6rem 1.5rem;
+}
+
+section > h2,
+section > p {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+section > h2 {
+  font-size: 1.5rem;
+}
+
+section > p {
+  margin: 1rem auto 0 auto;
+}
+
+section ul {
+  margin-top: 3rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+li {
+  width: auto;
+  height: auto;
+  transition: 0.2s ease transform;
+}
+
+li:hover {
+  transform: scale(0.99) rotate(1deg);
+}
+
+li * {
+  text-decoration: none;
+}
+
+li img {
+  border-radius: 0.5rem;
+  box-shadow:rgb( 0, 0, 0, 0 ) 0 0 0;
+  transition: 0.2s ease box-shadow;
+}
+
+li:hover img {
+  box-shadow:rgb( 0, 0, 0, 0.25 ) 0.25rem 0.25rem 0.25rem;
+}
+
+figcaption {
+  color: rgba( 0, 0, 0, 0.15 );
+}
+
+footer {
+  text-align: center;
+  background-color: rgb( 40, 40, 80 );
+  padding: 2.5rem 1rem;
+}
+
+footer h2 {
+  color: rgb( 244, 244, 244 );
+  font-style: italic;
+}
+
+footer p {
+  color: rgb( 244, 244, 244 );
+  margin-top: 1rem;
+}
+
+footer a {
+  color: rgb( 100, 100, 160 );
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+  ul { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen and (min-width: 1024px) {
+  ul { grid-template-columns: 1fr 1fr 1fr; }
+}
